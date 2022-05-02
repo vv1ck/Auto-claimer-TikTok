@@ -12,12 +12,12 @@ Tool features :
 install in kali linux :
 <!--START_SECTION:waka-->
 ```
-sudo git clone https://github.com/vv1ck/Brute-Force-instagram
+sudo git clone https://github.com/vv1ck/Auto-claimer-TikTok
 ```
 <!--END_SECTION:waka-->
 <!--START_SECTION:waka-->
 ```
-cd Brute-Force-instagram
+cd Auto-claimer-TikTok
 ```
 <!--END_SECTION:waka-->
 -----------------------
