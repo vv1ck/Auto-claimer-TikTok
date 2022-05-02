@@ -1,5 +1,5 @@
 # Auto-claimer-TikTok
-<img src="https://w7.pngwing.com/pngs/903/769/png-transparent-tik-tok-tiktok-art-logo-design-painting-icon.png"></img>
+<img src="https://e.top4top.io/p_2313vr7ll0.png"></img>
 Guess the password for Instgram accounts
 - 
 Tool features :
