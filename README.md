@@ -1,6 +1,7 @@
 # Auto-claimer-TikTok
 <img src="https://e.top4top.io/p_2313vr7ll0.png"></img>
-Guess the password for Instgram accounts
+Auto claimer TikTok
+
 - 
 Tool features :
 - It has 2 mods:
