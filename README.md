@@ -36,6 +36,6 @@ python3 Auto_claimer.py
 ---------------------
 - Note: Do not forget to put the proxy file in the same folder as the tool, and if you are going to use the combo system, also put the combo file in the same folder
 ---------------------
-By JOKER | <a class="" href="https://www.snapchat.com/add/j0k.y?">Snapchat 👻</a> | <a class="" href="http://t.me/vv1ck">telegram 🔷</a> | <a class="" href="http://t.me/TweakPY">telegram 2 🔷</a>
+By JOKER | <a class="" href="https://intagram.com/221298">Instagram💢</a> | <a class="" href="http://t.me/vv1ck">telegram 🔷</a> | <a class="" href="http://t.me/TweakPY">telegram 2 🔷</a>
 -
 seee
