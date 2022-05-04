@@ -151,8 +151,7 @@ class Auto_claimer_TIKTOK:
 		except ValueError:exit(input('\n [-] Please enter a number, not a letter !\n'))
 		
 		self.Check_sessionid()
-	def Claimed(self):
-		global username,sisn
+	def Claimed(self,sisn,username):
 		try:
 			sent=post('https://www.tiktok.com/passport/web/login_name/update/?aid=1988&app_language=ar&app_name=tiktok_web&browser_language=en&browser_name=Mozilla&browser_online=true',headers={'Host': 'www.tiktok.com','Accept': '*/*','Accept-Language': 'en','Content-Type': 'application/x-www-form-urlencoded','Origin': 'https://www.tiktok.com','tt-csrf-token': 'Kp0Tepeh-mSyGmG3e6VP-bgxl1oqUg7_Gcq0','Connection': 'keep-alive','User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15','Content-Length': '22','Cookie': 'sessionid='+sisn},data=f'login_name={username}')
 			
@@ -169,8 +168,8 @@ class Auto_claimer_TIKTOK:
 				self.err+=1
 				print(f'\rCheck [{self.dn}] | errors [{self.err}] | Proxies [{self.prox}] | User[{username}]\r',end="")
 		except KeyboardInterrupt:exit()
-	def Check_Auto2(self):
-		global username,headers,urls,sisn
+	def Check_Auto2(self,sisn,username):
+		global headers,urls
 		while True:
 			for pro in self.proxy:
 				self.proxylist.append(pro)
@@ -184,7 +183,7 @@ class Auto_claimer_TIKTOK:
 					self.dn+=1
 					print(f'\rCheck [{self.dn}] | errors [{self.err}] | Proxies [{self.prox}] | User[{username}]\r',end="")
 				elif ( '"info":"{}"' in sent.text ):
-					th1 = threading.Thread(target=self.Claimed)
+					th1 = threading.Thread(target=self.Claimed(sisn,username))
 					th1.start()
 				elif ( sent.status_code == 403 ):
 					self.prox+=1
@@ -198,7 +197,7 @@ class Auto_claimer_TIKTOK:
 				self.prox+=1
 				print(f'\rCheck [{self.dn}] | errors [{self.err}] | Proxies [{self.prox}] | User[{username}]\r',end="")
 	def Check_Auto_list(self):
-		global username,headers,urls,sisn
+		global headers,urls
 		while True:
 			if self.use >= len(self.listUser):
 				self.use=0
@@ -206,7 +205,7 @@ class Auto_claimer_TIKTOK:
 				self.use+=1
 			else:
 				username = self.listUser[self.use]
-				self.sis+=1
+				self.use+=1
 			
 			if self.sis >= len(self.listSisn):
 				self.sis=0
@@ -223,10 +222,10 @@ class Auto_claimer_TIKTOK:
 					self.dn+=1
 					print(f'\rCheck [{self.dn}] | errors [{self.err}] | Proxies [{self.prox}] | User[{username}]\r',end="")
 				elif ( '"info":"{}"' in sent.text ):
-					th1 = threading.Thread(target=self.Claimed)
+					th1 = threading.Thread(target=self.Claimed(sisn,username))
 					th1.start()
 				elif ( sent.status_code == 403 ):
-					th1 = threading.Thread(target=self.Check_Auto2)
+					th1 = threading.Thread(target=self.Check_Auto2(sisn,username))
 					th1.start()
 				else:
 					self.err+=1
